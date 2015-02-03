@@ -1,18 +1,14 @@
 % Ejemplo de documento LaTeX
 % Tipo de documento y tamaño de letra
 \documentclass[12pt]{article}
-
 % Preparando para documento en Español.
 % Para documento en Inglés no hay que hacer esto.
 \usepackage[spanish]{babel}
 \selectlanguage{spanish}
 \usepackage[utf8]{inputenc}
-
 % EL titulo, autor y fecha del documento
 \title{Tutorial breve de los comandos de Bash}
 \author{Martin Alejandro Paredes Sosa}
-\date{28 de Enero de 2015}
-
 % Aqui comienza el cuerpo del documento
 \begin{document}
 % Construye el título
@@ -25,51 +21,36 @@ Su función es de mediar entre el usuario y el sistema.
 
 \section{Navegación}
 
-Esta sección describe como se puede navegar entre archivos y directorios.
-Existen diferente comandos dentro del Bash que nos permiten navegar por los directorios:
-\begin{itemize}
-\item {\tt pwd:} Muestra el directorio en el que se esta trabajando
-\item {\tt ls:} Muestra un lista de contenido del directorio
-\item {\tt cd:} Te permite cambiar de directorio
-\end{itemize}
 \begin{tabular}{|c|l|l|}
 \hline
 Comando & Descripción & Ejemplo \\
 \hline
-pwd & Muestra el directorio en el que se esta trabajando & pwd \\ \hline
-ls & Muestra un lista de contenido del directorio & ls\\ \hline
-file & Nos regresa el tipo de archivo & file aaa.txt \\
+pwd & Muestra el directorio en el que se esta trabajando & pwd:  /home/user\\ \hline
+ls & Muestra un lista de contenido del directorio & ls: Dir1 Arc1\\ \hline
+cd & Nos permite cambiar entre los directorios & cd [lugar] \\
 \hline
 \end{tabular} 
 
-\section{Manejo de Archivos}
 
-Veremos 3 comandos:
-
-\begin{itemize}
-\item {\tt ls} (Lista los archivos y directorios) 
-\item {\tt less} (Ver el contenido de archivos)
-\item {\tt file} (Nos informa sobre el tipo de archivo)
-\end{itemize}
-
-
-\begin{enumerate}
-\item {\tt ls} Lista los archivos y directorios
-\item {\tt less} Ver el contenido de archivos
-\item {\tt file} (Nos informa sobre el tipo de archivo
-\end{enumerate}
+\section{Manual}
 
 \begin{tabular}{|c|l|l|}
 \hline
 Comando & Descripción & Ejemplo \\
 \hline
-ls & listar contenido de directorios & ls -al \\ \hline
-less & Permite ver el contenido de archivos de texto & less aaa.txt \\ \\hline
-file & Nos regresa el tipo de archivo & file aaa.txt \\
-\hline
+man[comando] & Te muestra el uso del comando & man ls: mustra contenido\\ \hline
 \end{tabular} 
 
-\section{Y otra sección mas}
+\section{Manipulacion de archivos}
+\begin{tabular}{|c|c|l|}
+\hline Comando & Descripción & Ejemplo \\ \hline
+mkdir & Crea un nuevo directorio & mkdir [Nombre del directorio] \\ \hline
+rmdir & Remueve un directorio exixtente & rmdir [Nombre del directorio] \\ \hline
+touch & Crea un nuevo archivo & touch [Nombre del directorio] \\ \hline
+cp & Copia un archivo & cp [origen][destino] \\ \hline
+mv & Mueve un archivo & mkdir [Nombre del directorio] \\ \hline
+
+\end{tabular}
 \subsection{Y una subsección}
 
 
