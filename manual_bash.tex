@@ -16,43 +16,102 @@
 
 \section{¿Qué es {\tt bash}?}
 
-Bash es un interpretador de comandos utilizado sobre el sistema operativo Linux.
+Bash es un interpretador de comandos utilizado sobre el sistema operativo Linux. 
 Su función es de mediar entre el usuario y el sistema.
 
 \section{Navegación}
-
+Estos comandos son utilizados para moverse entre los directorios \\
 \begin{tabular}{|c|l|l|}
 \hline
 Comando & Descripción & Ejemplo \\
 \hline
 pwd & Muestra el directorio en el que se esta trabajando & pwd:  /home/user\\ \hline
 ls & Muestra un lista de contenido del directorio & ls: Dir1 Arc1\\ \hline
-cd & Nos permite cambiar entre los directorios & cd [lugar] \\
+cd & Nos permite cambiar entre los directorios & cd [Destino] \\
 \hline
-\end{tabular} 
-
-
-\section{Manual}
-
-\begin{tabular}{|c|l|l|}
-\hline
-Comando & Descripción & Ejemplo \\
-\hline
-man[comando] & Te muestra el uso del comando & man ls: mustra contenido\\ \hline
 \end{tabular} 
 
 \section{Manipulacion de archivos}
+Estos comando son los que te permiten manipular los archivos o directorios, como copiarlos, crearlos, borralos etre otras funciones.\\
 \begin{tabular}{|c|c|l|}
 \hline Comando & Descripción & Ejemplo \\ \hline
 mkdir & Crea un nuevo directorio & mkdir [Nombre del directorio] \\ \hline
 rmdir & Remueve un directorio exixtente & rmdir [Nombre del directorio] \\ \hline
 touch & Crea un nuevo archivo & touch [Nombre del directorio] \\ \hline
 cp & Copia un archivo & cp [origen][destino] \\ \hline
-mv & Mueve un archivo & mkdir [Nombre del directorio] \\ \hline
+mv & Mueve un archivo & mv [origen] [Destino] \\ \hline
+rm & Remueve un archivo & rm [Nombre del directorio] \\ \hline
+cat & Te muestra el contenido de un archivo & cat [archivo] \\ \hline
+vi & Te permite editar un archivo & vi [archivo] \\ \hline
 
-\end{tabular}
-\subsection{Y una subsección}
+\end{tabular} 
+\subsection{Procesos}
+\subsection{Temp}
+-echo: Muestra un mensajes
+user@bash: echo Alguien estuvo aqui
 
+-less: Permite moverte en un archivo
+user@bash: less MAPSFile
+
+-chmod: Cambiar los permisos de un directorio o archivo
+user@bash: chmod ug+rwx
+
+-head: Ver las primera lineas de informcion
+user@bash: head -5 MAPSFile.txt
+
+-tail: Ver las ultimas lineas de informacion
+user@bash: tail MAPSFile.txt
+
+-sort: Organiza la informacion
+user@bash: sort MAPSFile.txt
+
+-nl: Muestra linea de numero antes de la informacion
+user@bash: nl MAPSFile.txt
+
+-wc: Muestra el numero de lineas, palabras y caracteres
+user@bash: wc MAPSFile
+
+-cut: Corta la informacion en campos y te meustra el campo espesificado
+user@bash: cut MAPSFile.txt
+
+-sed: Busca y remplaza en la informacion
+user@bash:sed 's/Www/wow/g MAPSFile.txt
+
+-uniq: Remueve lineas duplicadas
+user@bash: uniq MAPSFile.txt
+
+-tac: Muestra los datos en orden inverso
+user@bash: tac MAPSFile.txt
+
+-egrep: Se muestran lieneas de datos que coinciden con un patron
+user@bash: egrep 'color'
+
+-top: Ver los proceso que se estan ejecutando en tiempo real
+user@bash: top
+
+-ps: Consige un lista de los procesos que estan en ejecucion
+user@bash: ps aux | grep 'wong'
+
+-kill: Termina un proceso
+user@bash: kill 7689
+
+-jobs: Muestra una lista de t4rabajos que estan corriendo en un segundo plano
+user@bash: jobs 
+
+-fg: Muevo procesos de segundo plano a un primer plano
+fg 4
+
+-which: Te muestra el camino a un programa en particular
+user@bash: which bash
+
+\section{Manual}
+Este comando es utilizado para conocer cual es su uso y además te muestra los parametros que el comando acepta. \\ 
+\begin{tabular}{|c|l|l|}
+\hline
+Comando & Descripción & Ejemplo \\
+\hline
+man[comando] & Te muestra el uso del comando & man ls: mustra contenido\\ \hline
+\end{tabular} 
 
 % Nunca debe faltar esta última linea.
 \end{document}
